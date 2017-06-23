@@ -7,5 +7,5 @@ RUN apt-get update &&\
 	useradd -m lede &&\
 	echo 'lede ALL=NOPASSWD: ALL' > /etc/sudoers.d/lede &&\
 	sudo -iu lede git clone https://github.com/lede-project/source.git lede &&\
-	sudo -iu lede lede/scripts/feeds update -a
+	sudo -iu lede lede/scripts/feeds update -a &&\
 	sudo -iu lede lede/scripts/feeds install -a
